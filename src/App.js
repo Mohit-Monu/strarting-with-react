@@ -25,7 +25,7 @@ function App() {
       id:"230",
       title: "Bike",
       price: 500000,
-      date: new Date(2023, 7, 21),
+      date: new Date(2022, 7, 21),
     },
   ];
   const [enteredExpense, setEnteredExpense] = useState(expenses);
