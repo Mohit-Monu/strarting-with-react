@@ -13,7 +13,7 @@ function App() {
       id:"120",
       title: "House",
       price: 50000,
-      date: new Date(2023, 7, 21),
+      date: new Date(2023, 6, 21),
     },
     {
       id:"130",
