@@ -2,12 +2,12 @@ import ExpenseItem from "./ExpenseItem"
 import "./Expenses.css"
 import Card from "../UI/Card"
 function Expenses(props){
+    console.log(props.items)
     return(
         <Card className="expenses">
-        <ExpenseItem title={props.items[0].title} price={props.items[0].price} date={props.items[0].date} ></ExpenseItem>
-        <ExpenseItem title={props.items[1].title} price={props.items[1].price} date={props.items[1].date} ></ExpenseItem>
-        <ExpenseItem title={props.items[2].title} price={props.items[2].price} date={props.items[2].date} ></ExpenseItem>
-        <ExpenseItem title={props.items[3].title} price={props.items[3].price} date={props.items[3].date} ></ExpenseItem> 
+            {props.items.map((item,index)=>{
+                return(<ExpenseItem key={index} title={item.title} price={item.price} date={item.date}></ExpenseItem>)
+            })}
         </Card>
     )
 }
