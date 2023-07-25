@@ -34,7 +34,6 @@ const ExpenseItem=(props)=> {
       <ExpenseDetails title={title} price={price}></ExpenseDetails>
       <button onClick={edittitleHandler} >Change Title</button>
       <button onClick={editPriceHandler} >Change Price</button>
-
       <button onClick={deleteHandler} >Delete</button>
     </Card>
   );
