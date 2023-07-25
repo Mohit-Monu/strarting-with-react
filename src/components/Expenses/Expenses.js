@@ -17,15 +17,19 @@ function Expenses(props) {
         onChangeFilter={filterChangeHandler}
       ></ExpensesFilter>
       {props.items
-      .filter(item => item.date.getFullYear() == filteredYear)
-      .map(item => (
-        <ExpenseItem
-          key={item.id}
-          title={item.title}
-          price={item.price}
-          date={item.date}
-        />
-      ))}
+        .filter((item) => {
+          if (item.date.getFullYear() == filteredYear) {
+            return item;
+          }
+        })
+        .map((item, index) => (
+          <ExpenseItem
+            key={item.id}
+            title={item.title}
+            price={item.price}
+            date={item.date}
+          />
+        ))}
     </Card>
   );
 }
